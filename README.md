@@ -1,113 +1,106 @@
-AI‑Powered Spam Mail Detection
-🚀 A web-based application to classify email messages as spam or ham (legitimate), powered by AI and deployed on Render.
+AI-Powered Spam Mail Detection
 
-🎯 Project Overview
-This project uses artificial intelligence to analyze the content of emails and determine whether they are spam or not. It provides a user-friendly web interface for testing fast, delivering near-instant results. Built with modern web tech and deployed on Render.
+A web-based application that classifies email messages as spam or legitimate (ham) using machine learning. The system provides a fast, interactive interface and is deployed on Render for public access.
 
-🧪 Key Features
-Fast text-based email classification: Classifies messages instantly via a web UI.
+Project Overview
 
-AI-powered model: Uses machine learning (e.g. Naive Bayes, Logistic Regression, or a neural pipeline) to score emails.
+This project uses machine learning techniques to analyze the content of emails and determine whether they are spam. It includes a user-friendly web interface that delivers near-instant predictions. The application is built using modern web technologies and deployed on Render for scalability and ease of access.
 
-Interactive UI: Input messages and immediately receive predictions.
+Key Features
 
-Production deployment: Hosted on Render for scalable and reliable access.
+Fast text-based email classification with instant predictions.
 
-📦 Tech Stack
+Machine learning–based model using algorithms such as Naive Bayes or Logistic Regression.
+
+Interactive web interface for entering email text and receiving results.
+
+Production deployment on Render for scalable and reliable public access.
+
+Tech Stack
 Layer	Technologies
-Frontend	React + Vite
-Build tool	Vite
-Backend (if any)	Node.js API (optional)
-Machine Learning	Scikit-learn / NLP classifier
-Deployment	Render (web service / static)
+Frontend	React, Vite
+Build Tool	Vite
+Backend (optional)	Node.js API
+Machine Learning	Scikit-learn / NLP Model
+Deployment	Render
+Installation & Local Setup
+git clone https://github.com/adityasutar01/Ai-powered-spam_mail_detection.git
+cd Ai-powered-spam_mail_detection
+npm install
+npm run build
+npm run preview        # Runs at http://localhost:4173
 
-⚙️ Installation & Local Setup
-Use the following steps to run the project locally:
+Deployment on Render
+Static Site Hosting (No Backend)
 
-bash
-Copy
-Edit
-git clone https://github.com/adityasutar01/Ai-powered-spam_mail_detection.git  
-cd Ai-powered-spam_mail_detection  
-npm install  
-npm run build          # Build production version  
-npm run preview        # Preview on http://localhost:4173  
-🌐 Deployment on Render
-⚙️ Static Site Host (if no backend)
-Build command: npm run build
+Build command:
 
-Publish directory: dist
+npm run build
 
 
-⚙️ Web Service Mode (if using Node backend)
-Add this start script in package.json:
+Publish directory:
 
-json
-Copy
-Edit
+dist
+
+Web Service Mode (With Optional Node Backend)
+
+Add to package.json:
+
 "start": "vite preview --port 8080"
-Set Start Command in Render dashboard to:
+
+
+Render start command:
+
 npm run start
 
+How It Works
 
-🚴‍♀️ How It Works (Hypothetical Flow)
-User enters an email message into the web interface.
+User enters an email message into the interface.
 
-The text is sent to the backend (or client side logic).
+The message is processed (client-side or via backend).
 
-Features (like TF–IDF or embeddings) are extracted.
+Features such as TF-IDF vectors or embeddings are extracted.
 
-The trained model predicts spam or ham.
+The trained model predicts whether the email is spam or ham.
 
-UI displays the result with confidence score.
+The result is displayed in the interface.
 
+Model and Data
 
+Algorithms: Naive Bayes, Logistic Regression, or similar classifiers.
 
-🧠 Model & Data (Explainable as needed)
-Model Types: Naive Bayes, Logistic Regression, or other classifier.
+Dataset: Publicly available labeled email datasets.
 
-Data: Trained on publicly available or curated datasets with labeled emails.
+Preprocessing: Tokenization, stop-word removal, vectorization, TF-IDF or embeddings.
 
-Preprocessing: Includes tokenization, stop-word removal, vectorization.
+Results and Performance
 
+Models of this type typically achieve up to 98% accuracy on standard evaluation datasets, depending on preprocessing quality and dataset size.
 
+Usage and Contribution
 
-📈 Results & Performance
-Expected spam-detection accuracy: up to ~98% on test sets (based on standard benchmarks) 
-medium.com
-github.com
-researchgate.net
-.
-
-
-✅ Usage & Contribution
-Feel free to clone, test, and build upon this project!
+You may clone, modify, and extend this project.
 
 To retrain the model:
 
-Prepare a dataset of labeled emails.
+Prepare a labeled email dataset.
 
-Retrain your chosen classifier.
+Retrain your classifier.
 
-Swap in the newly trained model.
+Replace the existing model with the updated version.
 
-Contributions (bug fixes, UI improvements, new model integration) are very welcome. Just open a PR on the GitHub repo.
+Contributions such as improvements, bug fixes, or enhancements are welcome through pull requests.
 
+License
 
-📄 License
-This project is open‑source under the MIT License (customize if otherwise).
+This project is open-source under the MIT License.
 
+Live Demo
 
-
-📌 Live Demo
-Check out the live version here:
 https://ai-powered-spam-mail-detection-c97l.onrender.com/
 
+Acknowledgments & References
 
+Research articles and resources on spam detection and machine learning.
 
-🤝 Acknowledgments & References
-Spam detection techniques: Naive Bayes filters famously applied in email classification tasks 
-linkedin.com
-en.wikipedia.org
-
-
+Background literature on Naive Bayes spam filtering.
